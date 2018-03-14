@@ -5,27 +5,29 @@
  */
 package com.fernando.controllers;
 
-import com.fernando.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
+import com.fernando.services.GreetingService;
+
 /**
- *
+ * @Controller torna  classe passa a ser uma entidade gerenciada pelo spring (BEAN) e entra no spring context
  * @author Fernando
  */
-//com @Controller esta classe passa a ser uma entidade gerenciada pelo spring (BEAN) e entra no spring context
+//
 @Controller
 public class MyController {
-    
-    private GreetingService greetingService;
 
+	 private GreetingService greetingService;
+
+	 //considerando que não passei um @Qualifier, irá buscar o bean com @Primary
     public MyController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
-    
-    
+
+
     public String hello(){
         System.out.println("Olá Fernando!");
-        return greetingService.sayGreeting();       
+        return greetingService.sayGreeting();
     }
-    
+
 }
