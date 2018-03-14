@@ -6,10 +6,16 @@
 package com.fernando.services;
 
 /**
- *
+ * Descriçãod a interface a ser implementada pelos beans
  * @author Fernando
  */
 public interface GreetingService {
+
+	/***
+	 * Retorna uma string de mensagem...
+	 * 
+	 * @return
+	 */
     public String sayGreeting();
-    
+
 }

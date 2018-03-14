@@ -27,7 +27,7 @@ public class SetterInjectedController {
 
     //neste método é feito o set da dependencia
     @Autowired // avisa para injetar no método
-	 @Qualifier("greetingServiceImpl") //como eu tenho mais de um impl para GreetingService, uso o @Qualifier para informar qual o bean (impl) injetado
+	 @Qualifier("greetingServiceSetterImpl") //como eu tenho mais de um impl para GreetingService, uso o @Qualifier para informar qual o bean (impl) injetado
     public void setGreetingService(GreetingService greetingService){
         this.greetingService = greetingService;
     }
