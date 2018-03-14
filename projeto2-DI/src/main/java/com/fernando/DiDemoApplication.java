@@ -22,11 +22,12 @@ public class DiDemoApplication {
         //chama o método hello do bean
         controller.hello();
         
+        System.out.println("Mensagem do controller usando @Primary bean: " + controller.hello()) ;
         //executa DI por propriedade 
-        System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
+        System.out.println("Mensagem do controller usando injeção por property: " + ctx.getBean(PropertyInjectedController.class).sayHello());
         
-        System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
+        System.out.println("Mensagem do controller usando injeção por setter: " + ctx.getBean(SetterInjectedController.class).sayHello());
         
-        System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+        System.out.println("Mensagem do controller usando injeção na constructor:" + ctx.getBean(ConstructorInjectedController.class).sayHello());
     }
 }
