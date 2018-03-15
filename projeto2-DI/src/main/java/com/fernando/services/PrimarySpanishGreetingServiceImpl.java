@@ -5,14 +5,16 @@
  */
 package com.fernando.services;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Service  //define que é um bean
-public class GreetingServiceSetterImpl implements GreetingService {
-	@Override
-	public String sayGreeting() {
-		return "GreetingServiceSetterImpl da setter...";
-	}
-
+@Service
+@Profile("es")
+@Primary
+public class PrimarySpanishGreetingServiceImpl implements GreetingService {
+    @Override
+    public String sayGreeting() {
+        return "Hola, que tal? Es el servicio de saludo primario!";
+    }    
 }
