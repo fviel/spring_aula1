@@ -1,8 +1,12 @@
 package guru.springframework.services;
 
+import org.springframework.stereotype.Repository;
+
 /**
  * Created by jt on 5/24/17.
  */
+//FERNANDO - FALTAVA DECLARAR A CLASSE COMO BEAN DO SPRING
+@Repository
 public class GreetingRepositoryImpl implements GreetingRepository {
 
     @Override
