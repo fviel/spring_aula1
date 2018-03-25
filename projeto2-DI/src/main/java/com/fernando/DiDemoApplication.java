@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+//esta anotação diz: Farei um component scan a partir deste pacote e abaixo dele...
 @SpringBootApplication
 public class DiDemoApplication {
 
